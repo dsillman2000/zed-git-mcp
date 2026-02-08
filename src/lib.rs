@@ -1,8 +1,8 @@
 use std::env;
 use zed_extension_api::{self as zed, Command, ContextServerId, Project, Result};
 
-const PACKAGE_NAME: &str = "mcp-hello-world";
-const SERVER_PATH: &str = "node_modules/mcp-hello-world/build/stdio.js";
+const PACKAGE_NAME: &str = "@cyanheads/git-mcp-server";
+const SERVER_PATH: &str = "node_modules/@cyanheads/git-mcp-server/dist/index.js";
 
 struct HelloWorldModelExtension;
 
@@ -14,7 +14,7 @@ impl zed::Extension for HelloWorldModelExtension {
     fn context_server_command(
         &mut self,
         _context_server_id: &ContextServerId,
-        project: &Project,
+        _project: &Project,
     ) -> Result<Command> {
         let latest_version = zed::npm_package_latest_version(PACKAGE_NAME)?;
         let version = zed::npm_package_installed_version(PACKAGE_NAME)?;
