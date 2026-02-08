@@ -6,5 +6,5 @@ authors = ["David Sillman <dsillman2000@gmail.com>"]
 description = "A secure and scalable Git MCP server giving AI agents powerful version control for local environments."
 repository = "https://github.com/dsillman2000/zed-git-mcp"
 
-[context_servers.git-mcp-server]
+[context_servers.mcp-server-git]
 name = "Git MCP server"
